@@ -1,6 +1,6 @@
 from flask import Flask
 from app_library import *
-from restplus import config_app, create_app
+from bootstrap import config_app, create_app
 
 # configure logger
 setup_logging(default_path='logging.json')
