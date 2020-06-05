@@ -2,7 +2,7 @@ import os
 import json
 import pymsteams
 import logging, logging.config
-from settings import *
+from config.settings import CONFIG
 
 # general purpose functions
 def open_file(filename):
@@ -18,21 +18,6 @@ def open_file(filename):
         return result
     except Exception as e:
         logging.error(e)
-
-def setup_logging(default_path='logging.json', default_level=logging.INFO, env_key='LOG_CFG'):
-    """
-    Logging loggers and handlers condifuration via logging.json file parameters
-    """
-    path = default_path
-    value = os.getenv(env_key, None)
-    if value:
-        path = value
-    if os.path.exists(path):
-        with open(path, 'rt') as f:
-            config = json.load(f)
-        logging.config.dictConfig(config)
-    else:
-        logging.basicConfig(level=default_level)
 
 def send_teams_message(message):
     """

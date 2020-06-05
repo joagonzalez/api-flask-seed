@@ -3,13 +3,13 @@ CONFIG = {
                 'DEBUG': True,
                 'HOSTNAME': '127.0.0.1',
                 'PORT': 5000,
-                'LOGGER': 'app_production'
+                'LOGGER': 'app_debug'
             },
             'RESTX': {
                 'VERSION': '1.0',
                 'TITLE': 'Powershell Helper API',
-                'DESCRIPTION': 'Flask restx API that works with celery workers to execute general purpose scripts.',
                 'RESTPLUS_SWAGGER_UI_DOC_EXPANSION': 'list',
+                'DESCRIPTION': 'Flask restx API that works with celery workers to execute general purpose scripts.',
                 'RESTPLUS_VALIDATE': True,
                 'RESTPLUS_MASK_SWAGGER': False,
                 'RESTPLUS_ERROR_404_HELP': False
