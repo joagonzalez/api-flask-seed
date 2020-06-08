@@ -1,11 +1,11 @@
 from flask_restx import Namespace, Api, Resource, fields
 from service.LoggerService import loggerService
 from models.message import message_model_definition, message_card_model, facts_model
-from utils.generalUtils import *
+from service.MSTeamsService import send_teams_message, send_teams_card_message, send_teams_test_message
 
-loggerService.info("initializing namespace with Teams endpoints")
+loggerService.info("initializing namespace with Teams endpoints from " + str(__name__))
 
-api = Namespace('Microsoft Teams', description='Endpoints for Microsoft Teams integration')
+api = Namespace('MicrosoftTeams', description='Endpoints for Microsoft Teams integration')
 
 # models
 message_model = api.model('Message model', message_model_definition)
