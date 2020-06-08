@@ -6,7 +6,7 @@ CONFIG = {
                 'LOGGER': 'app_debug'
             },
             'RESTX': {
-                'VERSION': '1.0',
+                'VERSION': {'V1': '1.0.0', 'V2': '2.0.1'},
                 'TITLE': 'Powershell Helper API',
                 'RESTPLUS_SWAGGER_UI_DOC_EXPANSION': 'list',
                 'DESCRIPTION': 'Flask restx API that works with celery workers to execute general purpose scripts.',
