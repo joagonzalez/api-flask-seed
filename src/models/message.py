@@ -5,8 +5,8 @@ facts_model = { 'name':  fields.String('Fact name'),
                 }
 
 message_model_definition = {
-                   'message': fields.String('Body of the message to send'),
-                    'from': fields.String('User that sends the message')
+                   'message': fields.String('Body of the message to send', required=True),
+                    'from': fields.String('User that sends the message', required=True)
                 }
 
 message_card_model = {

@@ -24,7 +24,7 @@ message_card_model = api.model('Card message model', {
 
 @api.route('/sendTextMessage')
 class SendTextMessage(Resource):
-    @api.expect(message_model)
+    @api.expect(message_model, validate=True)
     def post(self):
         loggerService.info("Sending a message to MS Teams")
         message = api.payload
