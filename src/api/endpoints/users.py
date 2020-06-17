@@ -1,7 +1,7 @@
 from flask_restx import Namespace, Api, Resource
 from service.LoggerService import loggerService
 
-loggerService.info("initializing namespace with Teams endpoints from " + str(__name__))
+loggerService.info("initializing namespace with Users endpoints from " + str(__name__))
 
 api = Namespace('UserManagement', description='Endpoints for user management')
 
